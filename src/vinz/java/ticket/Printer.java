@@ -1,17 +1,8 @@
 package vinz.java.ticket;
 
 public class Printer {
-    private int fileNumber = 0;
-
-    public Printer() {
-
+    public void printTicket(Ticket ticket) {
+        System.out.println("Sending the ticket to the print engine.." + ticket);
     }
-
-    public Ticket printTicket() {
-        Ticket id = new Ticket;
-        return id;
-
-    }
-
     
 }

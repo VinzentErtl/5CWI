@@ -1,19 +1,19 @@
 package vinz.java.ticket;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Controller {
-    private String storage;
-    private List<Ticket> tickets;
+    private Printer printer = new Printer();
+    private List<Ticket> tickets = new ArrayList<Ticket>();
 
-    public Controller(String storage) {
-        this.storage = storage;
-    }
 
-    public String getStorage() {
-        return storage;
-    }
+    public Ticket createTicket(){
+        Ticket ticket = new Ticket();
+        printer.printTicket(ticket);
+        tickets.add(ticket);
+        return ticket;
 
-    public Ticket createTicket() {
-        Ticket id = this.createTicket();
     }
 
     
