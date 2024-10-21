@@ -10,6 +10,7 @@ public class File {
         this.exkusion = exkusion;
         this.name = name;
     }
+   
     public String getExkusion() {
         return exkusion;
     }
