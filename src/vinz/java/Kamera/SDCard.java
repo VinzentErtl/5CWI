@@ -5,7 +5,7 @@ import java.util.List;
 
 
 
-public class SDCard {
+/*public class SDCard {
     private int capacity;
     private List<File> files = new ArrayList<File>();
 
@@ -28,3 +28,4 @@ public class SDCard {
         this.capacity = capacity;
     }
 }
+*/

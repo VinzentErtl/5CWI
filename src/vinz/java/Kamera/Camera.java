@@ -2,7 +2,7 @@ package vinz.java.Kamera;
 
 import java.util.Random;
 
-public class Camera {
+/*public class Camera {
     private int pixel;
     private int weight;
     private Random random = new Random();
@@ -22,3 +22,4 @@ public class Camera {
 }
 }
 
+*/
