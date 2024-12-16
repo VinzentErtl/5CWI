@@ -12,6 +12,7 @@ public class Main {
         gui.addProduct(b1);
         gui.addProduct(new Cycle());
 
+        gui.showTotalStockValue();
         gui.run();
     }
 }
