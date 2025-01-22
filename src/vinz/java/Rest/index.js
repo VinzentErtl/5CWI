@@ -2,22 +2,21 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-// Middleware to parse JSON requests
+
 app.use(express.json());
 
-// Sample data: Array of people
+// Sample data
 let people = [
     { id: 1, name: 'Alice', age: 25 },
     { id: 2, name: 'Bob', age: 30 },
     { id: 3, name: 'Charlie', age: 35 }
 ];
 
-// GET: Retrieve all people
+// GET
 app.get('/people', (req, res) => {
     res.json(people);
 });
 
-// GET: Retrieve a person by ID
 app.get('/people/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
     const person = people.find(p => p.id === id);
@@ -28,10 +27,10 @@ app.get('/people/:id', (req, res) => {
     }
 });
 
-// POST: Add a new person
+// POST
 app.post('/people', (req, res) => {
     const newPerson = {
-        id: people.length ? people[people.length - 1].id + 1 : 1, // Auto-increment ID
+        id: people.length ? people[people.length - 1].id + 1 : 1, 
         name: req.body.name,
         age: req.body.age
     };
@@ -39,7 +38,7 @@ app.post('/people', (req, res) => {
     res.status(201).json(newPerson);
 });
 
-// PUT: Update a person's details by ID
+// PUT
 app.put('/people/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
     const personIndex = people.findIndex(p => p.id === id);
@@ -51,7 +50,7 @@ app.put('/people/:id', (req, res) => {
     }
 });
 
-// DELETE: Remove a person by ID
+// DELETE
 app.delete('/people/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
     const personIndex = people.findIndex(p => p.id === id);
@@ -63,7 +62,7 @@ app.delete('/people/:id', (req, res) => {
     }
 });
 
-// Start the server
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
